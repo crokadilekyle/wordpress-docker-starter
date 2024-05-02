@@ -1,0 +1,31 @@
+{
+    "name": "crokadilekyle/wordpress-docker-starter",
+    "description": "A starting point for wordpress theme development with docker",
+    "type": "project",
+    "extra": {
+        "installer-paths": {
+            "plugins/{$name}/": [
+                "type:wordpress-plugin"
+            ] 
+        }
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://wpackagist.org"
+        },
+        {
+            "type": "composer",
+            "url": "https://composer.deliciousbrains.com"
+        }
+    ],
+    "require": {
+        "deliciousbrains-plugin/wp-migrate-db-pro": "^2.6",
+        "yoast/wordpress-seo": "*"
+    },
+    "config": {
+        "allow-plugins": {
+            "composer/installers": true
+        }
+    }
+}
